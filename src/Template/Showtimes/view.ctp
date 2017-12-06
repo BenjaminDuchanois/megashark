@@ -9,12 +9,9 @@
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Edit Showtime'), ['action' => 'edit', $showtime->id]) ?> </li>
         <li><?= $this->Form->postLink(__('Delete Showtime'), ['action' => 'delete', $showtime->id], ['confirm' => __('Are you sure you want to delete # {0}?', $showtime->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Showtimes'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Showtime'), ['action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Movies'), ['controller' => 'Movies', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Movie'), ['controller' => 'Movies', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Showtimes'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('List Rooms'), ['controller' => 'Rooms', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Room'), ['controller' => 'Rooms', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="showtimes view large-9 medium-8 columns content">

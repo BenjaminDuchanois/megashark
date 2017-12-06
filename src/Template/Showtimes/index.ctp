@@ -9,9 +9,8 @@
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Showtime'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Movies'), ['controller' => 'Movies', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Movie'), ['controller' => 'Movies', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Rooms'), ['controller' => 'Rooms', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Room'), ['controller' => 'Rooms', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Showtimes'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Rooms'), ['controller' => 'Rooms', 'action' => 'index']) ?></li>  
     </ul>
 </nav>
 <div class="showtimes index large-9 medium-8 columns content">

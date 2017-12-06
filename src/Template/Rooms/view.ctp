@@ -9,8 +9,9 @@
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Edit Room'), ['action' => 'edit', $room->id]) ?> </li>
         <li><?= $this->Form->postLink(__('Delete Room'), ['action' => 'delete', $room->id], ['confirm' => __('Are you sure you want to delete # {0}?', $room->id)]) ?> </li>
+        <li><?= $this->Html->link(__('List Movies'), ['controller' => 'Movies', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('List Showtimes'), ['controller' => 'Showtimes', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('List Rooms'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Room'), ['action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="rooms view large-9 medium-8 columns content">
@@ -37,4 +38,13 @@
             <td><?= h($room->modified) ?></td>
         </tr>
     </table>
+</div>
+<div class="rooms view large-9 medium-8 columns content">
+    <h3><?= h("Movies of the week in " . $room->name) ?></h3>
+    <?php 
+        foreach($showtime as $i)
+        {
+            echo $i->movie_id . "  "  . $i->movie_name . "  " . $i->movie_created  '<br/>';
+        }
+    ?>
 </div>
