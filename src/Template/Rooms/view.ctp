@@ -40,11 +40,43 @@
     </table>
 </div>
 <div class="rooms view large-9 medium-8 columns content">
-    <h3><?= h("Movies of the week in " . $room->name) ?></h3>
-    <?php 
-        foreach($showtime as $i)
-        {
-            echo $i->movie_id . "  "  . $i->movie_name . "  " . $i->movie_created  '<br/>';
-        }
-    ?>
+    <h3><?= h("Movies of the week in " . $room->name) ?>></h3>
+    <table>
+        <tr>
+            <th scope="col"><?= __("Lundi") ?></th>
+            <th scope="col"><?= __("Mardi") ?></th>
+            <th scope="col"><?= __("Mercredi") ?></th>
+            <th scope="col"><?= __("Jeudi") ?></th>
+            <th scope="col"><?= __("Vendredi") ?></th>
+            <th scope="col"><?= __("Samedi") ?></th>
+            <th scope="col"><?= __("Dimanche") ?></th>
+        </tr>
+        <?php for($i=0;$i<7;i++){ ?>
+            <td>
+                <table>
+                    <?php foreach($room->showtimes as $showtime): ?>
+                        <tr>            
+                            <?php foreach ($showtime as $showthisweek): ?>
+                                <tr>
+                            
+                                    <?php 
+                                        &test=($showtime->start)-<format('N');
+                                        if (test==$i){ ?>
+                                            <tr>
+                                                <td>
+                                                    <?php echo h($showtime-<movie-<name);
+                                                    echo h($showtime->start);
+                                                    echo h($showtime->end); ?>
+                                                </td>
+                                            </tr>
+                                        <?php } 
+                                    ?>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tr>
+                    <?php endforeach; ?>
+                </table>
+            </td>
+        <?php } ?>
+    </table>
 </div>
